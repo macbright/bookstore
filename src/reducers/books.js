@@ -1,4 +1,7 @@
-const booklist = (state, action) => {
+import INITIAL_BOOKS from '../utils/bookObject';
+
+
+const bookList = (state = INITIAL_BOOKS, action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
       return [...state, action.payload];
@@ -8,3 +11,5 @@ const booklist = (state, action) => {
       return state;
   }
 };
+
+export default bookList;

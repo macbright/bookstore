@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Book from '../components/Book';
 
-const BookList = () => (
+const BookList = ({ books }) => (
   <div>
     <table>
       <tr>
@@ -9,11 +10,7 @@ const BookList = () => (
         <th> Title </th>
         <th> Category </th>
       </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-      </tr>
+			<Book />
     </table>
   </div>
 );

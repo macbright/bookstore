@@ -12,6 +12,7 @@ const BookForm = () => (
         </label>
       </div>
       <div>
+				<label> Book Category:</label>
         <select>
           <option value="Action"> Action </option>
           <option value="Biography"> Biography </option>
@@ -23,7 +24,7 @@ const BookForm = () => (
         </select>
       </div>
       <div>
-        <input type="submit" value="submit" />
+        <button type="submit" value="submit"> Submit </button>
       </div>
     </form>
   </div>

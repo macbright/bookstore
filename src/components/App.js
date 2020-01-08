@@ -7,8 +7,9 @@ import BookForm from '../containers/BookForm';
 const App = () => {
   return (
     <div>
+			<BookForm />
+			<br />
       <BooksList />
-      <BookForm />
     </div>
   );
 };
