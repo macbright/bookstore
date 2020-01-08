@@ -13,10 +13,10 @@ const BookList = ({ books }) => (
       </tr>
       {
         // eslint-disable-next-line react/prop-types
-        books.map((book) => (
+        books.map(book => (
           <tr key={book.bookId}>
             <td>{ book.bookId }</td>
-            <td>{ book.title}</td>
+            <td>{ book.title }</td>
             <td>{ book.category }</td>
           </tr>
         ))
@@ -27,6 +27,6 @@ const BookList = ({ books }) => (
 BookList.prototype = {
   books: PropTypes.array,
 };
-const mapStateToProps = (state) => ({ books: state.books });
+const mapStateToProps = state => ({ books: state.books });
 
 export default connect(mapStateToProps)(BookList);

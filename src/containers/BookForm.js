@@ -6,9 +6,9 @@ const BookForm = () => (
   <div>
     <form>
       <div>
-        <label>
+        <label htmlFor="title">
 					Book Title:
-          <input type="text" placeHolder="enter book title" name="title" />
+          <input type="text" placeHolder="enter book title" name="title" id="title" />
         </label>
       </div>
       <div>
