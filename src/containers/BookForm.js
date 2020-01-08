@@ -12,7 +12,7 @@ const BookForm = () => (
         </label>
       </div>
       <div>
-				<label> Book Category:</label>
+        <label> Book Category:</label>
         <select>
           <option value="Action"> Action </option>
           <option value="Biography"> Biography </option>
