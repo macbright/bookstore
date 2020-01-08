@@ -1,5 +1,16 @@
+/* eslint-disable arrow-body-style */
 import React from 'react';
 
-const App = () => <div>App</div>;
+import BooksList from '../containers/BookList';
+import BookForm from '../containers/BookForm';
+
+const App = () => {
+  return (
+    <div>
+      <BooksList />
+      <BookForm />
+    </div>
+  );
+};
 
 export default App;
