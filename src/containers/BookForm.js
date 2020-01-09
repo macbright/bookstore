@@ -1,27 +1,26 @@
-/* eslint-disable no-tabs, jsx-a11y/label-has-for */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
+const BOOK_CATEGORY = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 const BookForm = () => (
   <div>
     <form>
       <div>
         <label htmlFor="title">
-					Book Title:
+          Book Title:
           <input type="text" placeHolder="enter book title" name="title" id="title" />
         </label>
       </div>
       <div>
-        <label> Book Category:</label>
-        <select>
-          <option value="Action"> Action </option>
-          <option value="Biography"> Biography </option>
-          <option value="History"> History</option>
-          <option value="Horro"> Horror</option>
-          <option value="Kids"> Kids </option>
-          <option value="Learning"> Learning </option>
-          <option value="Sci-Fi"> Sci-Fi </option>
-        </select>
+        <label htmlFor="selectCategory">
+        Book Category:
+          <select id="selectCategory">
+            {
+              BOOK_CATEGORY.map(category => (
+                <option key={category} value={category}>{ category }</option>
+              ))
+            }
+          </select>
+        </label>
       </div>
       <div>
         <button type="submit" value="submit"> Submit </button>

@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
 const BookList = ({ books }) => (
   <div>
     <table>
@@ -12,7 +11,6 @@ const BookList = ({ books }) => (
         <th> Category </th>
       </tr>
       {
-        // eslint-disable-next-line react/prop-types
         books.map(book => (
           <tr key={book.bookId}>
             <td>{ book.bookId }</td>
@@ -24,8 +22,14 @@ const BookList = ({ books }) => (
     </table>
   </div>
 );
-BookList.prototype = {
-  books: PropTypes.array,
+BookList.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      bookId: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 const mapStateToProps = state => ({ books: state.books });
 
