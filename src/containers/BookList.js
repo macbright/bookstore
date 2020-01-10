@@ -18,7 +18,7 @@ const BookList = ({ books, removeBook }) => (
       </thead>
       <tbody>
         {
-          books.map((book) => (
+          books.map(book => (
             <Book
               key={book.bookId}
               title={book.title}
@@ -44,6 +44,6 @@ BookList.propTypes = {
   removeBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({ books: state.books });
+const mapStateToProps = state => ({ books: state.books });
 
 export default connect(mapStateToProps, { removeBook })(BookList);
