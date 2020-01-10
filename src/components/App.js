@@ -1,5 +1,14 @@
 import React from 'react';
 
-const App = () => <div>App</div>;
+import BooksList from '../containers/BookList';
+import BookForm from '../containers/BookForm';
+
+const App = () => (
+  <div>
+    <BookForm />
+    <br />
+    <BooksList />
+  </div>
+);
 
 export default App;
