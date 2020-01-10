@@ -1,8 +1,10 @@
+/* eslint-disable no-return-assign, react/no-find-dom-node */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import { createBook } from '../actions/index';
 import uuidv1 from 'uuid/v1';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions/index';
 
 const BOOK_CATEGORY = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -10,36 +12,35 @@ class BookForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-			bookId: '',
       title: '',
       category: '',
     };
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-	handleChange(event) {
-		event.preventDefault();
-		this.setState({
-			[event.target.id]: event.target.value,
-			});
-	}
-
-  handleSubmit (event) {
+  handleChange(event) {
     event.preventDefault();
-		const book = {
-			bookId: uuidv1(),
-			title:  this.state.title, 
-			category: this.state.category,
-			};
+    this.setState({
+      [event.target.id]: event.target.value,
+    });
+  }
 
-		if(this.state.title === '') {
-			alert('book title already exist or blank');
-			return 0;
-		} 
-		this.props.createBook(book);
-		this.setState({ title: '', });
-		ReactDOM.findDOMNode(this.title).value = '';
+  handleSubmit(event) {
+    event.preventDefault();
+    const { title, category } = this.state;
+    const { createBook } = this.props;
+    const book = {
+      bookId: uuidv1(),
+      title,
+      category,
+    };
+
+    if (title) {
+      createBook(book);
+      this.setState({ title: '' });
+      ReactDOM.findDOMNode(this.title).value = '';
+    }
   }
 
   render() {
@@ -48,29 +49,29 @@ class BookForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="title">
-							Book Title:
+              Book Title:
               <input
                 type="text"
                 placeholder="enter book title"
                 name="title"
                 id="title"
-								ref={title => (this.title = title)}
+                ref={(title) => (this.title = title)}
                 onChange={this.handleChange}
               />
             </label>
           </div>
           <div>
             <label htmlFor="selectCategory">
-						Book Category:
+            Book Category:
               <select
                 id="category"
                 onChange={this.handleChange}
               >
                 {
-									BOOK_CATEGORY.map((category) => (
-  <option key={category} value={category}>{ category }</option>
-									))
-								}
+                  BOOK_CATEGORY.map((category) => (
+                    <option key={category} value={category}>{ category }</option>
+                  ))
+                }
               </select>
             </label>
           </div>
@@ -83,7 +84,11 @@ class BookForm extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
+BookForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
   createBook: state.books,
 });
 
