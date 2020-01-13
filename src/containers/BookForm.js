@@ -6,7 +6,7 @@ import uuidv1 from 'uuid/v1';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 
-const BOOK_CATEGORY = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+import { BOOK_CATEGORY } from '../utils/bookObject';
 
 class BookForm extends React.Component {
   constructor(props) {
@@ -55,7 +55,7 @@ class BookForm extends React.Component {
                 placeholder="enter book title"
                 name="title"
                 id="title"
-                ref={title => (this.title = title)}
+                ref={(title) => (this.title = title)}
                 onChange={this.handleChange}
               />
             </label>
@@ -68,7 +68,7 @@ class BookForm extends React.Component {
                 onChange={this.handleChange}
               >
                 {
-                  BOOK_CATEGORY.map(category => (
+                  BOOK_CATEGORY.map((category) => (
                     <option key={category} value={category}>{ category }</option>
                   ))
                 }
@@ -88,7 +88,7 @@ BookForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   createBook: state.books,
 });
 

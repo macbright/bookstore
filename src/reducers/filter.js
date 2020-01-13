@@ -1,9 +1,7 @@
-import INITIAL_BOOKS from '../utils/bookObject';
-
-const bookFilter = (state = INITIAL_BOOKS, action) => {
+const bookFilter = (state = [], action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
-      return state.filter(book => book.bookId === action.payload);
+      return state.filter((book) => book.category === action.payload);
     default:
       return state;
   }
