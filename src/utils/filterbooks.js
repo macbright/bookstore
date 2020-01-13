@@ -1,6 +1,6 @@
 
 const filteredBooks = (filter, books) => {
-  if (filter !== '' && filter !== 'All') {
+  if (filter !== 'All') {
     const filtered = books.filter(book => book.category === filter);
     return filtered;
   }
