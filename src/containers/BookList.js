@@ -23,7 +23,7 @@ const BookList = ({
       </thead>
       <tbody>
         {
-          filteredBooks(filter, books).map((book) => (
+          filteredBooks(filter, books).map(book => (
             <Book
               key={book.bookId}
               title={book.title}

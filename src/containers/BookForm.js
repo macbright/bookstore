@@ -68,7 +68,7 @@ class BookForm extends React.Component {
                 onChange={this.handleChange}
               >
                 {
-                  BOOK_CATEGORY.map((category) => (
+                  BOOK_CATEGORY.map(category => (
                     <option key={category} value={category}>{ category }</option>
                   ))
                 }
@@ -88,7 +88,7 @@ BookForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   createBook: state.books,
 });
 
