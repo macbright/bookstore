@@ -1,7 +1,7 @@
-const bookFilter = (state = [], action) => {
+const bookFilter = (state = '', action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
-      return state.filter((book) => book.category === action.payload);
+      return action.payload;
     default:
       return state;
   }
