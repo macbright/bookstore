@@ -55,7 +55,7 @@ class BookForm extends React.Component {
                 placeholder="enter book title"
                 name="title"
                 id="title"
-                ref={(title) => (this.title = title)}
+                ref={title => (this.title = title)}
                 onChange={this.handleChange}
               />
             </label>
