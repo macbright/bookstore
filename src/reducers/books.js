@@ -1,6 +1,5 @@
 import INITIAL_BOOKS from '../utils/bookObject';
 
-
 const bookList = (state = INITIAL_BOOKS, action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
