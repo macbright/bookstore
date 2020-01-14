@@ -1,0 +1,70 @@
+.container{
+	width: 1400px;
+  height: 1097px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fafafa;
+}
+
+.book-container{
+	width: 80%;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+	margin: auto;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.radialProgressBar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ddd;
+	box-sizing: border-box;
+	margin-right: 10px;
+}
+
+.radialProgressBar .overlay {
+	box-sizing: border-box;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  padding-top: 30%;
+}
+
+.progress-10 {
+  background-image: -webkit-linear-gradient(36deg, #ddd 50%, transparent 50%), -webkit-linear-gradient(left, #028cd5 50%, #ddd 50%);
+  background-image: linear-gradient(54deg, #ddd 50%, transparent 50%), linear-gradient(90deg, #028cd5 50%, #ddd 50%);
+}
+.completed{
+	margin-top: 20px;
+}
+.completed p{
+	margin: 0;
+	padding: 0;
+	font-size: 1.7rem;
+	font-family: Montserrat;
+	color: #121212;
+	line-height: normal;
+  letter-spacing: normal;
+	height: 25px
+}
+.completed span{	
+  color: #121212;
+	opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.8rem;
+	line-height: normal;
+  letter-spacing: normal;
+}
+.completed{
+	border-right: #e8e8e8 solid 1px;
+}

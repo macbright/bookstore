@@ -12,29 +12,17 @@ const BookList = ({
 }) => (
   <div>
     <CategoryFilter handleFilterChange={filterBook} />
-    <table>
-      <thead>
-        <tr>
-          <th> Book ID </th>
-          <th> Title </th>
-          <th> Category </th>
-          <th>Remove Book</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          filteredBooks(filter, books).map(book => (
-            <Book
-              key={book.bookId}
-              title={book.title}
-              category={book.category}
-              bookId={book.bookId}
-              deleteBook={removeBook}
-            />
-          ))
-          }
-      </tbody>
-    </table>
+    {
+       filteredBooks(filter, books).map(book => (
+         <Book
+           key={book.bookId}
+           title={book.title}
+           category={book.category}
+           bookId={book.bookId}
+           deleteBook={removeBook}
+         />
+       ))
+    }
   </div>
 );
 
