@@ -11,17 +11,22 @@ const BookList = ({
   books, filter, removeBook, filterBook,
 }) => (
   <div>
-    <CategoryFilter handleFilterChange={filterBook} />
+    <div className="main-container">
+      <div className="nav-container d-flex">
+        <div className="logo"> Bookstore CMS</div>
+        <CategoryFilter handleFilterChange={filterBook} />
+      </div>
+    </div>
     {
-       filteredBooks(filter, books).map(book => (
-         <Book
-           key={book.bookId}
-           title={book.title}
-           category={book.category}
-           bookId={book.bookId}
-           deleteBook={removeBook}
-         />
-       ))
+      filteredBooks(filter, books).map((book) => (
+        <Book
+          key={book.bookId}
+          title={book.title}
+          category={book.category}
+          bookId={book.bookId}
+          deleteBook={removeBook}
+        />
+      ))
     }
   </div>
 );
@@ -39,7 +44,7 @@ BookList.propTypes = {
   filterBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   books: state.books,
   filter: state.filter,
 });

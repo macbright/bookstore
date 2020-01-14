@@ -45,38 +45,35 @@ class BookForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="title">
-              Book Title:
-              <input
-                type="text"
-                placeholder="enter book title"
-                name="title"
-                id="title"
-                ref={title => (this.title = title)}
-                onChange={this.handleChange}
-              />
-            </label>
+      <div className="form-container">
+        <div className="form-title">ADD NEW BOOK</div>
+        <form onSubmit={this.handleSubmit} className="row">
+          <div className="col-md-7 bg-white">
+            <input
+              type="text"
+              placeholder="Book title"
+              name="title"
+              id="title"
+              ref={(title) => (this.title = title)}
+              onChange={this.handleChange}
+              className="w-100"
+            />
           </div>
-          <div>
-            <label htmlFor="selectCategory">
-            Book Category:
-              <select
-                id="category"
-                onChange={this.handleChange}
-              >
-                {
-                  BOOK_CATEGORY.map(category => (
-                    <option key={category} value={category}>{ category }</option>
-                  ))
-                }
-              </select>
-            </label>
+          <div className="col-md-3">
+            <select
+              id="category"
+              className="w-100 h-full"
+              onChange={this.handleChange}
+            >
+              {
+                BOOK_CATEGORY.map((category) => (
+                  <option key={category} value={category}>{ category }</option>
+                ))
+              }
+            </select>
           </div>
-          <div>
-            <button type="submit" value="submit"> Submit </button>
+          <div className="col-md-2">
+            <button type="submit" value="submit" className="btn btn-primary full-render"> Add Book </button>
           </div>
         </form>
       </div>
@@ -88,7 +85,7 @@ BookForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   createBook: state.books,
 });
 
