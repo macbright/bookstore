@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -23,11 +24,11 @@ const Book = ({
         <span> completed</span>
       </div>
     </div>
-		<div className="col-md-3">
-			<p className="m-0 color-12121">current chapter</p>
-			<strong className="chapter"> chapter 10</strong>
-			<button type="button" className="btn btn-primary mt-4">UPDATE PROGRESS</button>
-		</div>
+    <div className="col-md-3">
+      <p className="m-0 color-12121">current chapter</p>
+      <strong className="chapter"> chapter 10</strong>
+      <button type="button" className="btn btn-primary mt-4">UPDATE PROGRESS</button>
+    </div>
   </div>
 );
 Book.propTypes = {

@@ -19,7 +19,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
         >
           <option value="Category" defaultValue>CATEGORY</option>
           {
-           ['All'].concat(BOOK_CATEGORY).map((category) => (
+           ['All'].concat(BOOK_CATEGORY).map(category => (
              <option key={category} value={category}>{ category }</option>
            ))
             }

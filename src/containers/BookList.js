@@ -18,7 +18,7 @@ const BookList = ({
       </div>
     </div>
     {
-      filteredBooks(filter, books).map((book) => (
+      filteredBooks(filter, books).map(book => (
         <Book
           key={book.bookId}
           title={book.title}
@@ -44,7 +44,7 @@ BookList.propTypes = {
   filterBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   books: state.books,
   filter: state.filter,
 });
