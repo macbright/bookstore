@@ -1,10 +1,18 @@
-# Calculator with React 
+
+<h1 align=center> **Bookstore with React & Redux ** </h1>
+
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![dependencies Status](https://david-dm.org/dwyl/esta/status.svg)](https://david-dm.org/dwyl/esta)
 
 This project comes after the introduction of the React & Redux JS framework. The main aim of the project is to learn how to build a very simple React application using Redux as a state management system. The project has been split into multiple milestones, and each milestone has functional and technical requirements that needs to be implemented.
 
 The project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
 
-## Tools
+
+
+![sample](./src/image/bookstore.png)
+
+## Background
 
 - Node.js
 - React
@@ -15,6 +23,9 @@ The project is part of a series of projects to be completed by students of [Micr
 - npm
 - CSS
 - ES6
+
+## Demo
+The demo page can be found [HERE](https://serene-golick-bd6385.netlify.app/)
 
 ## Usage
 
@@ -28,6 +39,12 @@ $ git clone https://github.com/macbright/react-book-store.git
 
 ```sh
 $ cd book-store
+```
+
+> install the npm packages
+
+```sh
+$ npm install
 ```
 
 > use npm or yarn to start the server (note: you must have npm and yarn install)
@@ -47,15 +64,20 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
-## Live Demo
+## Maintainers 
 
-The demo page can be found [HERE]()
+👤  **Bright Okike**
 
-## Designed and developed by
+- Github: [@macbright](https://github.com/macbright)
+- LinkedIn: [@bokike](https://www.linkedin.com/in/bokike/)
+- Twitter: [@b_okike](https://twitter.com/b_okike)
+  
 
-[Chukwuemeka Bright](https://github.com/macbright)
-&&
-[Shakhawat Hossain](https://github.com/shshamim63)
+👤  **Shakhawat Hossain**
+- Github: [Shakhawat Hossain](https://github.com/shshamim63)
+- LinkedIn: [Shakhawat Hossain](https://www.linkedin.com/in/shakhawathossainshamim/)
+
+
 
 ## Contributing
 
@@ -67,7 +89,5 @@ The demo page can be found [HERE]()
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE.md) file for details
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bright okike & Shakhawat Hossain
+[MIT license](https://opensource.org/licenses/MIT).
