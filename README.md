@@ -77,7 +77,9 @@ You will also see any lint errors in the console.
 - Github: [Shakhawat Hossain](https://github.com/shshamim63)
 - LinkedIn: [Shakhawat Hossain](https://www.linkedin.com/in/shakhawathossainshamim/)
 
-
+## Future Features
+1. Extend A backend API for users to comment, and upate reading progress
+2. Add a book store API for users to add book directly from the net
 
 ## Contributing
 
